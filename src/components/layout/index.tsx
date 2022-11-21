@@ -1,0 +1,19 @@
+import Footer from "./footer";
+import Header from "./header";
+import styled from "@emotion/styled";
+
+const Main = styled.main`
+  min-height: calc(100vh - 105px - 318px);
+`;
+
+const Layout = ({ children }: React.PropsWithChildren<{}>) => {
+  return (
+    <>
+      <Header />
+      <Main>{children}</Main>
+      <Footer />
+    </>
+  );
+};
+
+export default Layout;
