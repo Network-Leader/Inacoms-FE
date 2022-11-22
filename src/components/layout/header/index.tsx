@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 import Navbar from "./Navbar";
 
 const HeaderDiv = styled.header`
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 105px;
   background-color: ${(props) => props.theme.color.black};
 `;

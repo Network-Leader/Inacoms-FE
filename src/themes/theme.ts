@@ -25,7 +25,7 @@ const theme: Theme = {
     black_20: "#202020",
     black_26: "#262626",
     black_2E: "#2E2E2E",
-    gray_B0: "B0B0B0",
+    gray_B0: "#B0B0B0",
     gray_B3: "#B3B3B3",
     gray_C3: "#C3C3C3",
     gray_8E: "#8E8E8E",
