@@ -45,7 +45,7 @@ const NavbarDiv = styled.nav`
 `;
 
 const navbarItem = [
-  { id: 1, name: "ABOUT", route: "#" },
+  { id: 1, name: "ABOUT", route: "/about" },
   { id: 2, name: "WORK", route: "#" },
   { id: 3, name: "MEMBERS", route: "#" },
   { id: 4, name: "OUTPUT", route: "#" },
@@ -56,7 +56,9 @@ const Navbar = () => {
   return (
     <NavbarDiv>
       <div className="logo">
-        <Image src={LogoImage} width={98} height={39} alt="로고" />
+        <Link href="/">
+          <Image src={LogoImage} width={98} height={39} alt="로고" />
+        </Link>
       </div>
       <div className="navAll">
         <div className="navList">
