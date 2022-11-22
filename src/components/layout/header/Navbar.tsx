@@ -61,10 +61,8 @@ const Navbar = () => {
       <div className="navAll">
         <div className="navList">
           {navbarItem.map((item) => (
-            <Link href={item.route}>
-              <div className="navItem" key={item.id}>
-                {item.name}
-              </div>
+            <Link href={item.route} key={item.id}>
+              <div className="navItem">{item.name}</div>
             </Link>
           ))}
           <div className="login">로그인</div>

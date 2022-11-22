@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const StatusSection = styled.section`
   background-color: ${(props) => props.theme.color.black};
+  padding-bottom: 508px;
   .inner {
     width: 479px;
     margin: 0 auto;
