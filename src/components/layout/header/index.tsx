@@ -7,7 +7,7 @@ const HeaderDiv = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  height: 105px;
+  height: 83px;
   background-color: ${(props) => props.theme.color.black};
 `;
 

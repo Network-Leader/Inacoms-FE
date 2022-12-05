@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
+import useScrollCount from "../../../hooks/useScrollCount";
 
 const StatusSection = styled.section`
   background-color: ${(props) => props.theme.color.black};
-  padding: 100px 0 508px 0;
+  padding: 0 0 508px 0;
   .inner {
     width: 479px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     gap: 69px;
@@ -56,7 +56,7 @@ const Status = () => {
           <p>학회 시작</p>
           <div className="content">
             <div className="none"></div>
-            <span className="emphasize">1996</span>
+            <div className="emphasize" {...useScrollCount(1996, 1800, 2500)} />
             <span className="normal">년</span>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Status = () => {
           <p>현재 활동중인 학회원 수</p>
           <div className="content">
             <div className="none"></div>
-            <span className="emphasize">21</span>
+            <div className="emphasize" {...useScrollCount(21, 1, 2000, 0.6)} />
             <span className="normal">명</span>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Status = () => {
           <p>올해 활동한 프로젝트 건수</p>
           <div className="content">
             <div className="none"></div>
-            <span className="emphasize">13</span>
+            <div className="emphasize" {...useScrollCount(13, 1, 1500, 1.2)} />
             <span className="normal">건</span>
           </div>
         </div>

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const ApplySection = styled.section`
   background-color: ${(props) => props.theme.color.black};
   .inner {
-    width: 1037px;
+    width: 1035px;
     margin: 0 auto;
     height: 500px;
     .type {
