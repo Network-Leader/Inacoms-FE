@@ -4,7 +4,7 @@ import Link from "next/link";
 import LogoImage from "../../../../public/images/logo/logo.png";
 
 const NavbarDiv = styled.nav`
-  width: 971px;
+  width: 983px;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -22,22 +22,22 @@ const NavbarDiv = styled.nav`
     .navList {
       display: flex;
       height: 100%;
-      gap: 55px;
+      gap: 49px;
       align-items: center;
       .navItem {
         color: ${(props) => props.theme.color.white};
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 700;
       }
     }
     .login {
       color: ${(props) => props.theme.color.black};
       background-color: ${(props) => props.theme.color.white};
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 700;
-      margin-left: 28px;
-      line-height: 30.59px;
-      padding: 3px 12.5px;
+
+      line-height: 22.94px;
+      padding: 5px 17px;
       border-radius: 10px;
       cursor: pointer;
     }
