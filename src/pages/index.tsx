@@ -1,5 +1,6 @@
 import Apply from "../components/main/apply";
 import Be from "../components/main/be";
+import FloatingFilm from "../components/main/floating";
 import Orientation from "../components/main/orientation";
 import Status from "../components/main/status";
 import Title from "../components/main/title";
@@ -12,6 +13,7 @@ const Home = () => {
       <TitleText />
       <Status />
       <Orientation />
+      <FloatingFilm />
       <Be />
       <Apply />
     </>
