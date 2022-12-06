@@ -7,7 +7,7 @@ const TitleSection = styled.section<{ yloc: number }>`
   opacity: ${(props) => (props.yloc > 4000 ? 0 : 1)};
   transition: 0.5s;
   width: 100vw;
-  height: calc(100vh - 105px);
+  height: calc(100vh - 83px);
   display: flex;
   align-items: center;
   justify-content: center;

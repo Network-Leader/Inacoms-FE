@@ -53,6 +53,10 @@ const navbarItem = [
 ];
 
 const Navbar = () => {
+  const toSign = () => {
+    const random = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+    window.location.replace(`/signin?${random}`);
+  };
   return (
     <NavbarDiv>
       <div className="logo">
@@ -67,7 +71,9 @@ const Navbar = () => {
               <div className="navItem">{item.name}</div>
             </Link>
           ))}
-          <div className="login">로그인</div>
+          <div className="login" onClick={toSign}>
+            로그인
+          </div>
         </div>
       </div>
     </NavbarDiv>
