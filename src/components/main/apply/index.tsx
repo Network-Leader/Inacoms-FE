@@ -16,6 +16,16 @@ const ApplySection = styled.section`
       margin-top: 22px;
       display: inline-block;
       border-color: ${(props) => props.theme.color.white};
+      &:hover {
+        color: ${(props) => props.theme.color.black};
+        background-color: ${(props) => props.theme.color.white};
+        font-size: 18px;
+        font-weight: 700;
+        padding: 13px 66px;
+        border: 3px solid;
+        border-radius: 50px;
+        display: inline-block;
+      }
     }
     .content {
       color: ${(props) => props.theme.color.white};
@@ -27,18 +37,6 @@ const ApplySection = styled.section`
     .firstBox {
       border-bottom: 1px solid white;
       padding: 18px 0 43px 65px;
-      .qualify {
-        .f_type {
-          color: ${(props) => props.theme.color.black};
-          background-color: ${(props) => props.theme.color.white};
-          font-size: 18px;
-          font-weight: 700;
-          padding: 13px 66px;
-          border: 3px solid;
-          border-radius: 50px;
-          display: inline-block;
-        }
-      }
     }
     .secondBox {
       padding: 4.5px 0 0 65px;
@@ -68,7 +66,7 @@ const Apply = () => {
       <div className="inner">
         <div className="firstBox">
           <div className="qualify">
-            <div className="f_type">지원 자격</div>
+            <div className="type">지원 자격</div>
             <div className="content">
               시각디자인학과 학부생 - 본전공생 (신입생, 재학생-2학년)
             </div>

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const BeSection = styled.section`
   width: 100vw;
-  padding-bottom: 533px;
+  padding: 519px 0 533px 0;
   background-color: ${(props) => props.theme.color.black};
   display: flex;
   justify-content: center;
