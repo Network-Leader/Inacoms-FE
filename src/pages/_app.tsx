@@ -3,6 +3,8 @@ import { Global, css, ThemeProvider } from "@emotion/react";
 import Head from "next/head";
 import theme from "../themes/theme";
 import Layout from "../components/layout";
+import { useRouter } from "next/router";
+import Header from "../components/layout/header";
 
 const reset = css`
   @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
@@ -141,6 +143,8 @@ const reset = css`
 `;
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -149,9 +153,15 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Global styles={reset} />
       <ThemeProvider theme={theme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        {router.pathname === "/signin" ? (
+          <>
+            <Header /> <Component {...pageProps} />
+          </>
+        ) : (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        )}
       </ThemeProvider>
     </>
   );

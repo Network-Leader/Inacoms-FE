@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const TitleSection = styled.section<{ uri: string }>`
   width: 100vw;
-  height: 79vw;
-  /* height: calc(100vh - 105px); */
+  height: 62.5vw;
   background-image: url(${(props) => props.uri});
   background-repeat: no-repeat;
+  margin-top: -83px;
   background-size: cover;
   .content {
     height: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 const Main = styled.main`
   margin-top: 83px;
-  min-height: calc(100vh - 105px - 318px);
+  min-height: calc(100vh - 83px - 318px);
 `;
 
 const Layout = ({ children }: React.PropsWithChildren<{}>) => {
