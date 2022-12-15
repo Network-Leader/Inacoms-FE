@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const HeaderDiv = styled.header`
   z-index: 999;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;

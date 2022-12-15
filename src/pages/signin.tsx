@@ -7,7 +7,6 @@ import styled from "@emotion/styled";
 const SignContainer = styled.section`
   display: flex;
   width: 100vw;
-  margin-top: 83px;
 `;
 
 const SignIn = () => {

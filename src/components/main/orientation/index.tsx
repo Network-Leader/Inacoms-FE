@@ -14,12 +14,14 @@ const OrientaionSection = styled.section`
     gap: 138px;
     .item {
       width: 231px;
-      .img {
-        width: 100%;
-        height: 231px;
-        border-radius: 50%;
-        overflow: hidden;
-        background-image: ${(props) => props.theme.color.gray_D9};
+      .imgBox {
+        height: 218px;
+        margin-bottom: 57px;
+        .img {
+          width: 100%;
+          overflow: hidden;
+          background-image: ${(props) => props.theme.color.gray_D9};
+        }
       }
       .titleBox {
         font-size: 32px;
@@ -27,7 +29,7 @@ const OrientaionSection = styled.section`
         color: ${(props) => props.theme.color.gray_F3};
         line-height: 191.2%;
         text-align: center;
-        margin: 27px 0 17px 0;
+        margin: 0 0 17px 0;
       }
       .desBox {
         font-weight: 500;
@@ -69,7 +71,9 @@ const Orientation = () => {
         {Item.map((item) => (
           <div className="item" key={item.id}>
             {/* <div className="img"></div> */}
-            <img src={item.src} alt="img" className="img" />
+            <div className="imgBox">
+              <img src={item.src} alt="img" className="img" />
+            </div>
             <div className="titleBox">{item.title}</div>
             <div className="desBox">{item.des}</div>
           </div>

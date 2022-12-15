@@ -56,7 +56,7 @@ const Status = () => {
           <p>학회 시작</p>
           <div className="content">
             <div className="none"></div>
-            <div className="emphasize" {...useScrollCount(1996, 1800, 2500)} />
+            <div className="emphasize" {...useScrollCount(1996, 1886, 1000)} />
             <span className="normal">년</span>
           </div>
         </div>
@@ -64,7 +64,7 @@ const Status = () => {
           <p>현재 활동중인 학회원 수</p>
           <div className="content">
             <div className="none"></div>
-            <div className="emphasize" {...useScrollCount(21, 1, 2000, 0.6)} />
+            <div className="emphasize" {...useScrollCount(21, 1, 1000)} />
             <span className="normal">명</span>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Status = () => {
           <p>올해 활동한 프로젝트 건수</p>
           <div className="content">
             <div className="none"></div>
-            <div className="emphasize" {...useScrollCount(13, 1, 1500, 1.2)} />
+            <div className="emphasize" {...useScrollCount(13, 1, 600)} />
             <span className="normal">건</span>
           </div>
         </div>

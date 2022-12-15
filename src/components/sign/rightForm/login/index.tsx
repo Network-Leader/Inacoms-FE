@@ -13,7 +13,6 @@ const LoginFormSection = styled.div`
       outline: none;
       margin-bottom: 24px;
       background-color: black;
-      letter-spacing: 2px;
       color: ${(props) => props.theme.color.gray_B0};
       &:last-of-type {
         margin-bottom: 40px;
