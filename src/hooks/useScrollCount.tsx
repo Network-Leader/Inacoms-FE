@@ -1,9 +1,9 @@
 import { useRef, useEffect, useCallback } from "react";
 
-const useScrollCount = (end: any, start = 0, duration = 3000, delay = 0) => {
+const useScrollCount = (end: any, start = 0, duration = 3000) => {
   const element = useRef<any>();
-  //   const observer = useRef<any>();
-  let observer: any;
+  const observer = useRef<any>();
+  // let observer: any;
   const stepTime = Math.abs(Math.floor(duration / (end - start)));
 
   const onScroll = useCallback(
@@ -16,7 +16,7 @@ const useScrollCount = (end: any, start = 0, duration = 3000, delay = 0) => {
           current.innerHTML = currentNumber;
           if (currentNumber === end) {
             clearInterval(counter);
-            observer.disconnect(element.current);
+            observer.current.disconnect(element.current);
           }
         }, stepTime);
       }
@@ -26,11 +26,11 @@ const useScrollCount = (end: any, start = 0, duration = 3000, delay = 0) => {
 
   useEffect(() => {
     if (element.current) {
-      observer = new IntersectionObserver(onScroll, { threshold: 0.9 });
-      observer.observe(element.current);
+      observer.current = new IntersectionObserver(onScroll, { threshold: 0.8 });
+      observer.current.observe(element.current);
     }
 
-    return () => observer && observer.disconnect();
+    return () => observer && observer.current.disconnect();
   }, [onScroll]);
 
   return {
