@@ -5,7 +5,7 @@ const LeftBgSection = styled.section`
   .one {
     width: 100%;
     height: calc(100vh - 83px);
-    background-image: url("images/bg/sign_bg1.png");
+    background-image: url("images/bg/sign/sign_bg1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@ const LeftBgSection = styled.section`
   .two {
     width: 100%;
     height: calc(100vh - 83px);
-    background-image: url("images/bg/sign_bg2.png");
+    background-image: url("images/bg/sign/sign_bg2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,7 +21,7 @@ const LeftBgSection = styled.section`
   .three {
     width: 100%;
     height: calc(100vh - 83px);
-    background-image: url("images/bg/sign_bg3.png");
+    background-image: url("images/bg/sign/sign_bg3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #171818;

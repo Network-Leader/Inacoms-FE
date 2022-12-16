@@ -1,7 +1,4 @@
 import styled from "@emotion/styled";
-import Orien1 from "../../../../public/images/item/orien1.png";
-import Orien2 from "../../../../public/images/item/orien2.png";
-import Orien3 from "../../../../public/images/item/orien3.png";
 
 const OrientaionSection = styled.section`
   background-color: ${(props) => props.theme.color.black};
@@ -46,19 +43,19 @@ const OrientaionSection = styled.section`
 const Item = [
   {
     id: 1,
-    src: "/images/item/orien1.png",
+    src: "/images/item/main/orien1.png",
     title: "피드백 문화",
     des: "선후배간 자유로운 피드백을\n통해 프로젝트를 발전시키는\n문화를 지향합니다.",
   },
   {
     id: 2,
-    src: "/images/item/orien2.png",
+    src: "/images/item/main/orien2.png",
     title: "협력 지향",
     des: "협력적 사고를 기반으로\n학회원과 소통하며 디자인\n하는 관계를 바라봅니다.",
   },
   {
     id: 3,
-    src: "/images/item/orien3.png",
+    src: "/images/item/main/orien3.png",
     title: "다양성",
     des: "큰 주제 및 범주 내에서\n각자의 선호에 따라\n다양하게 진행합니다.",
   },
