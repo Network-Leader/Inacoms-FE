@@ -60,7 +60,7 @@ const ApplySection = styled.section`
   }
 `;
 
-const Apply = () => {
+const MainApply = () => {
   return (
     <ApplySection>
       <div className="inner">
@@ -119,4 +119,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default MainApply;

@@ -30,7 +30,7 @@ const TitleSection = styled.section`
   }
 
   .content {
-    height: 100%;
+    height: calc(100% - 50px);
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
