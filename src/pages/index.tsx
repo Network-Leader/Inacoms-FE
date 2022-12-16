@@ -1,4 +1,4 @@
-import Apply from "../components/main/apply";
+import MainApply from "../components/main/apply";
 import Be from "../components/main/be";
 import FloatingFilm from "../components/main/floating";
 import Orientation from "../components/main/orientation";
@@ -15,7 +15,7 @@ const Home = () => {
       <Orientation />
       <FloatingFilm />
       <Be />
-      <Apply />
+      <MainApply />
     </>
   );
 };
