@@ -6,18 +6,16 @@ const LeftBgSection = styled.section`
     width: 100%;
     height: calc(100vh - 83px);
     background-image: url("images/bg/sign_bg1.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #171818;
     background-position: center;
   }
   .two {
     width: 100%;
     height: calc(100vh - 83px);
     background-image: url("images/bg/sign_bg2.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #171818;
     background-position: center;
   }
   .three {
