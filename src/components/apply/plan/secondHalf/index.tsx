@@ -1,27 +1,36 @@
 import { HalfListBox } from "..";
 
 const secondHalfList = [
-  { index: 1, month: "2월", list: ["정기전시 <초성전>", "워크숍"] },
   {
-    index: 2,
-    month: "3월",
-    list: ["상반기 공모전 진행", "신입생 홍보 및 모집", "인쇄물 기초 스터디"],
+    index: 1,
+    month: "8월",
+    list: ["협업 프로젝트 시작", "신입생 스터디 준비"],
   },
   {
     index: 2,
-    month: "4월",
-    list: ["상반기 공모전 진행", "마니또", "신입생 스터디 1차"],
+    month: "9월",
+    list: ["협업 프로젝트 진행", "인커미 커밍 행사"],
   },
   {
     index: 3,
-    month: "5월",
-    list: ["상반기 공모전 제출", "외부 초청 세미나", "웹 아카이브전"],
+    month: "10월",
+    list: [
+      "협업 프로젝트 마감",
+      "세미나",
+      "하반기 공모전 시작",
+      "삼성 디자인 멤버십",
+    ],
   },
-  { index: 4, month: "6월", list: ["정기전시 준비", "웹 아카이브전"] },
   {
-    index: 5,
-    month: "여름방학",
-    list: ["정기전시 활동", "학회 준비 툴 스터디", "하계 MT"],
+    index: 4,
+    month: "11월",
+    list: ["하반기 공모전 제출", "졸업 전시회", "프로필 촬영"],
+  },
+  { index: 5, month: "12월", list: ["하반기 공모전 마감"] },
+  {
+    index: 6,
+    month: "겨울방학",
+    list: ["동계 MT", "겨울방학 활동"],
   },
 ];
 
@@ -29,16 +38,14 @@ const SecondHalf = () => {
   return (
     <HalfListBox>
       {secondHalfList.map((item) => (
-        <div className="list">
+        <div className="list" key={item.index}>
           <div className="month" key={item.index}>
             {item.month}
           </div>
-          {item.list.map((item) => (
-            <>
-              <div className="contentList">
-                <span>{item}</span>
-              </div>
-            </>
+          {item.list.map((item, index) => (
+            <div className="contentList" key={index}>
+              <span>{item}</span>
+            </div>
           ))}
         </div>
       ))}

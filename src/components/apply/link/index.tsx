@@ -41,7 +41,7 @@ const Link = () => {
     <LinkSection>
       <div className="textBox">
         <p className="title">
-          Who's the next
+          Who&apos;s the next
           <br />
           INACOMS
         </p>
