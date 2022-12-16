@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const ApplyTitleTextSection = styled.section`
   background-color: black;
   text-align: center;
-  padding-top: 413px;
+  padding: 413px 0 422px 0;
   .textBox {
     .title {
       color: ${(props) => props.theme.color.white};

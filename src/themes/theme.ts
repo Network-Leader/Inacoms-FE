@@ -16,7 +16,7 @@ const theme: Theme = {
   },
   color: {
     white: "#fff",
-    white_opacity: "rgba(0,0,0,.15)",
+    white_opacity: "rgba(255,255,255,.15)",
     black: "#000",
     black_14: "#141414",
     black_1F: "#1F1F1F",

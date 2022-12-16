@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import DownArrow from "../../../../public/images/icons/apply/down_arrow.png";
+
 const ApplyTitleSection = styled.section`
   background-image: url("/images/bg/apply/apply_top_bg.png");
   background-color: black;
@@ -9,7 +10,6 @@ const ApplyTitleSection = styled.section`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 1px solid black;
   position: relative;
   .textBox {
     display: flex;
