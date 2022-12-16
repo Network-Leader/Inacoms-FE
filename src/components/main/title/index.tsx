@@ -6,10 +6,7 @@ import Image from "next/image";
 const TitleSection = styled.section`
   width: 100vw;
   height: 56.25vw;
-  background-repeat: no-repeat;
-  /* margin-top: -83px; */
   position: relative;
-  background-size: cover;
   .videoBox {
     .blur {
       width: 100%;
@@ -51,7 +48,7 @@ const TitleSection = styled.section`
     }
   }
 `;
-// uri={"/images/bg/main_top_bg.png"}
+
 const Title = () => {
   return (
     <TitleSection>

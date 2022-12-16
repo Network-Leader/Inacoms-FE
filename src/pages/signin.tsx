@@ -15,7 +15,7 @@ const SignIn = () => {
   useEffect(() => {
     const random = router.asPath.split("?")[1];
     setRan(random);
-  }, [ran]);
+  }, []);
   return (
     <SignContainer>
       <LeftBg random={ran} />
