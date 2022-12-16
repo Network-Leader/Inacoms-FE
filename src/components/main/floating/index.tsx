@@ -360,14 +360,14 @@ const FloatingFilm = () => {
       isCinema={isCinema}
     >
       <img
-        src="/images/item/illus1.png"
+        src="/images/item/main/illus1.png"
         alt="img"
         className="illus1"
         onMouseOver={() => setIsIllus(false)}
         onMouseLeave={() => setIsIllus(false)}
       />
       <img
-        src="/images/item/illus2.jpg"
+        src="/images/item/main/illus2.jpg"
         alt="img"
         className="illus2"
         onMouseOver={() => setIsIllus(true)}
@@ -375,77 +375,77 @@ const FloatingFilm = () => {
       />
 
       <img
-        src="/images/item/illus3.jpg"
+        src="/images/item/main/illus3.jpg"
         alt="img"
         className="illus3"
         onMouseOver={() => setIsIllus(true)}
         onMouseLeave={() => setIsIllus(false)}
       />
       <img
-        src="/images/item/slack1.png"
+        src="/images/item/main/slack1.png"
         alt="img"
         className="slack1"
         onMouseOver={() => setIsSlack(true)}
         onMouseLeave={() => setIsSlack(true)}
       />
       <img
-        src="/images/item/figma1.png"
+        src="/images/item/main/figma1.png"
         alt="img"
         className="figma1"
         onMouseOver={() => setIsFigma(true)}
         onMouseLeave={() => setIsFigma(false)}
       />
       <img
-        src="/images/item/photoshop1.png"
+        src="/images/item/main/photoshop1.png"
         alt="img"
         className="photoshop1"
         onMouseOver={() => setIsPhotoshop(true)}
         onMouseLeave={() => setIsPhotoshop(false)}
       />
       <img
-        src="/images/item/photoshop2.jpg"
+        src="/images/item/main/photoshop2.jpg"
         alt="img"
         className="photoshop2"
         onMouseOver={() => setIsPhotoshop(true)}
         onMouseLeave={() => setIsPhotoshop(false)}
       />
       <img
-        src="/images/item/photoshop3.png"
+        src="/images/item/main/photoshop3.png"
         alt="img"
         className="photoshop3"
         onMouseOver={() => setIsPhotoshop(true)}
         onMouseLeave={() => setIsPhotoshop(false)}
       />
       <img
-        src="/images/item/indesign1.png"
+        src="/images/item/main/indesign1.png"
         alt="img"
         className="indesign1"
         onMouseOver={() => setIsInDesign(true)}
         onMouseLeave={() => setIsInDesign(false)}
       />
       <img
-        src="/images/item/indesign2.png"
+        src="/images/item/main/indesign2.png"
         alt="img"
         className="indesign2"
         onMouseOver={() => setIsInDesign(true)}
         onMouseLeave={() => setIsInDesign(false)}
       />
       <img
-        src="/images/item/indesign3.jpg"
+        src="/images/item/main/indesign3.jpg"
         alt="img"
         className="indesign3"
         onMouseOver={() => setIsInDesign(true)}
         onMouseLeave={() => setIsInDesign(false)}
       />
       <img
-        src="/images/item/cinema1.png"
+        src="/images/item/main/cinema1.png"
         alt="img"
         className="cinema1"
         onMouseOver={() => setIsCinema(true)}
         onMouseLeave={() => setIsCinema(false)}
       />
       <img
-        src="/images/item/cinema2.jpg"
+        src="/images/item/main/cinema2.jpg"
         alt="img"
         className="cinema2"
         onMouseOver={() => setIsCinema(true)}

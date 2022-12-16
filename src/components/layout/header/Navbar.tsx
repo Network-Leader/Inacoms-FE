@@ -49,7 +49,7 @@ const navbarItem = [
   { id: 2, name: "WORK", route: "#" },
   { id: 3, name: "MEMBERS", route: "#" },
   { id: 4, name: "OUTPUT", route: "#" },
-  { id: 5, name: "APPLICATION", route: "#" },
+  { id: 5, name: "APPLICATION", route: "/apply" },
 ];
 
 const Navbar = () => {
