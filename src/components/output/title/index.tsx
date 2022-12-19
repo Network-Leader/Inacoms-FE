@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import DownArrow from "../../../../public/images/icons/apply/down_arrow.png";
 
-export const ApplyTitleSection = styled.section`
+const OutputTitleSection = styled.section`
   background-image: url("/images/bg/apply/apply_top_bg.png");
   background-color: black;
   width: 100vw;
@@ -51,27 +51,22 @@ export const ApplyTitleSection = styled.section`
   }
 `;
 
-const ApplyTitle = () => {
+const Title = () => {
   return (
-    <ApplyTitleSection>
+    <OutputTitleSection>
       <div className="textBox">
         <p className="title">
           INACOMS
           <br />
-          Recruitment
+          Our history
         </p>
-        <p className="des">
-          시각디자인 전공학회 INACOMS에서 신규회원을 모집합니다!
-        </p>
-        <p className="duration">
-          <span>03.07 - 03.15</span>23:00까지
-        </p>
+        <p className="des">학회원들이 만들어낸 INACOMS만의 history</p>
       </div>
       <div className="arrow">
         <Image src={DownArrow} width={60} height={55} alt="arrow" />
       </div>
-    </ApplyTitleSection>
+    </OutputTitleSection>
   );
 };
 
-export default ApplyTitle;
+export default Title;
