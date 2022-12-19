@@ -68,7 +68,7 @@ const Out = () => {
       </div>
       <div className="contentBox">
         {outData.map((item) => (
-          <div className="item">
+          <div className="item" key={item.id}>
             <Image src={item.url} alt="썸네일" width={144} height={144} />
             <p className="itemTitle">{item.title}</p>
           </div>
