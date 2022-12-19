@@ -46,9 +46,9 @@ const NavbarDiv = styled.nav`
 
 const navbarItem = [
   { id: 1, name: "ABOUT", route: "/about" },
-  { id: 2, name: "WORK", route: "#" },
-  { id: 3, name: "MEMBERS", route: "#" },
-  { id: 4, name: "OUTPUT", route: "#" },
+  { id: 2, name: "WORK", route: "/work" },
+  { id: 3, name: "MEMBERS", route: "/members" },
+  { id: 4, name: "OUTPUT", route: "/output" },
   { id: 5, name: "APPLICATION", route: "/apply" },
 ];
 
