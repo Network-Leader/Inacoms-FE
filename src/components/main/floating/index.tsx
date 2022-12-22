@@ -169,8 +169,15 @@ const FloatingFilmSection = styled.section<{
     width: 599px;
     height: 333px;
   }
+  .cinema3 {
+    top: 0;
+    left: 142px;
+    width: 314px;
+    height: 448px;
+  }
   .cinema1,
-  .cinema2 {
+  .cinema2,
+  .cinema3 {
     position: absolute;
     background-color: black;
     display: none;
@@ -448,6 +455,13 @@ const FloatingFilm = () => {
         src="/images/item/main/cinema2.jpg"
         alt="img"
         className="cinema2"
+        onMouseOver={() => setIsCinema(true)}
+        onMouseLeave={() => setIsCinema(false)}
+      />
+      <img
+        src="/images/item/main/cinema3.jpg"
+        alt="img"
+        className="cinema3"
         onMouseOver={() => setIsCinema(true)}
         onMouseLeave={() => setIsCinema(false)}
       />

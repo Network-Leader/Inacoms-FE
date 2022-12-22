@@ -1,10 +1,17 @@
+import Bottom from "../components/about/bottom";
 import Title from "../components/about/title";
-
+import TitleText from "../components/about/titleText";
+import Plan from "../components/apply/plan";
 const About = () => {
   return (
-    <div style={{ height: "8000px" }}>
-      <Title />
-    </div>
+    <>
+      <div style={{ minHeight: "4500px", backgroundColor: "black" }}>
+        <Title />
+      </div>
+      <TitleText />
+      <Plan />
+      <Bottom />
+    </>
   );
 };
 
