@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import AwardsList from "./awardsList";
+import { useState } from "react";
+import YearList from "./yearList";
 
 const AwardsBox = styled.div`
   width: 1033px;
@@ -21,20 +24,28 @@ const AwardsBox = styled.div`
   }
   .contentBox {
     border: 1px solid white;
-    padding: 123px 80px;
+    padding: 97px 111px 0 56px;
     border-radius: 20px;
     height: 2012px;
+    display: flex;
   }
 `;
-
+const yearData = [
+  2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020,
+];
 const Awards = () => {
+  const [year, setYear] = useState(2008);
+
   return (
     <AwardsBox>
       <div className="titleBox">
         <p className="title">Awards</p>
         <p className="subtitle">INACOMS 학회원들의 수상내역</p>
       </div>
-      <div className="contentBox"></div>
+      <div className="contentBox">
+        <YearList year={year} setYear={setYear} />
+        <AwardsList />
+      </div>
     </AwardsBox>
   );
 };
