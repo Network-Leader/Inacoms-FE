@@ -4,6 +4,7 @@ const BottomSection = styled.section`
   background-image: url("/images/bg/apply/apply_bot_bg.jpg");
   width: 100vw;
   height: 48.6vw;
+  background-color: rgba(0, 0, 0, 0.4);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
