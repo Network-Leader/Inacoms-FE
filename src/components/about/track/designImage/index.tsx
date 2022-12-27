@@ -90,12 +90,16 @@ const DesignImage = ({ type }: { type: string }) => {
   return (
     <ImageDiv type={type}>
       {type === "identity"
-        ? identityImg.map((item) => <IdentityItem url={item} />)
+        ? identityImg.map((item, index) => (
+            <IdentityItem url={item} key={index} />
+          ))
         : type === "illus"
-        ? illusImg.map((item) => <IllusItem url={item} />)
+        ? illusImg.map((item, index) => <IllusItem url={item} key={index} />)
         : type === "service"
-        ? serviceImg.map((item) => <ServiceItem url={item} />)
-        : editImg.map((item) => <EditItem url={item} />)}
+        ? serviceImg.map((item, index) => (
+            <ServiceItem url={item} key={index} />
+          ))
+        : editImg.map((item, index) => <EditItem url={item} key={index} />)}
     </ImageDiv>
   );
 };
