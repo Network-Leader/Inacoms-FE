@@ -186,6 +186,17 @@ const awardsList = [
       "제 4회 K-독도 공모전 카드뉴스 부문 대상",
     ],
   },
+  {
+    id: 14,
+    year: 2022,
+    des: [
+      "2022 international busan design award (IBDA) 특별상",
+      "2022 제1회 강원디자인전람회 공모전 입선",
+      "2022 제1회 강원디자인전람회 공모전 특선",
+      "2022 D2B디자인페어 입선",
+      "2022 Blueawards 상품문화디자인 국제공모전 입선",
+    ],
+  },
 ];
 
 const AwardsList = () => {
