@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 const BottomSection = styled.section`
   width: 100vw;
@@ -27,7 +28,10 @@ const BottomSection = styled.section`
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background-color: ${(props) => props.theme.color.gray_D9};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: ${(props) => props.theme.color.black};
       margin-bottom: 56px;
     }
     .title {
@@ -51,7 +55,14 @@ const Bottom = () => {
     <BottomSection>
       <div className="blur"></div>
       <div className="textBox">
-        <div className="circle"></div>
+        <div className="circle">
+          <Image
+            src="/images/logo/logo.png"
+            alt="로고"
+            width={85}
+            height={35}
+          />
+        </div>
         <div className="title">❤️ 놀기도 잘 노는 이너컴스 ❤️</div>
         <div className="subtitle">Instagram @inacoms</div>
       </div>

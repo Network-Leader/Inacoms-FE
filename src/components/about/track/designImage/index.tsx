@@ -15,6 +15,7 @@ const IdentityItem = styled.div<{ url: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 13px;
   background-image: url(${(props) => props.url});
   transition: 0.4s;
   &:hover {
@@ -29,6 +30,7 @@ const IllusItem = styled.div<{ url: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 13px;
   background-image: url(${(props) => props.url});
   transition: 0.4s;
   &:hover {
@@ -43,6 +45,7 @@ const ServiceItem = styled.div<{ url: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 13px;
   background-image: url(${(props) => props.url});
   transition: 0.4s;
   &:hover {
@@ -57,6 +60,7 @@ const EditItem = styled.div<{ url: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 13px;
   background-image: url(${(props) => props.url});
   transition: 0.4s;
   &:hover {
