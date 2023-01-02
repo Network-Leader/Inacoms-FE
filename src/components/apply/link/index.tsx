@@ -29,7 +29,9 @@ const LinkSection = styled.section`
       font-size: 18px;
       font-weight: 700;
       cursor: pointer;
+      transition: 0.2s;
       &:hover {
+        transition: 0.2s;
         background-color: ${(props) => props.theme.color.red};
       }
     }

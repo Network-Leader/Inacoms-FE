@@ -1,3 +1,4 @@
+import ActivitySlide from "../components/main/activitySlide";
 import MainApply from "../components/main/apply";
 import Be from "../components/main/be";
 import FloatingFilm from "../components/main/floating";
@@ -13,6 +14,7 @@ const Home = () => {
       <TitleText />
       <Status />
       <Orientation />
+      <ActivitySlide />
       <FloatingFilm />
       <Be />
       <MainApply />
