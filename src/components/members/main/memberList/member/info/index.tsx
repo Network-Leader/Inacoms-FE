@@ -208,8 +208,13 @@ const Info = ({ member }: { member: any }) => {
           <div className="contact">
             <div className="title">컨택</div>
             {member[0]?.contact.map((item: any, index: number) => (
-              <a href={`${item.link}`} target="_blank">
-                <div className="list" key={index} style={{ cursor: "pointer" }}>
+              <a
+                href={`${item.link}`}
+                target="_blank"
+                rel="noreferrer"
+                key={index}
+              >
+                <div className="list" style={{ cursor: "pointer" }}>
                   {item.mark}
                 </div>
               </a>
@@ -219,7 +224,11 @@ const Info = ({ member }: { member: any }) => {
         <div className="subInfo2">
           <div className="behance">
             <div className="title">비핸스</div>
-            <a href={`${member[0]?.behance.link}`} target="_blank">
+            <a
+              href={`${member[0]?.behance.link}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className="list"
                 style={{ textDecoration: "underline", cursor: "pointer" }}
