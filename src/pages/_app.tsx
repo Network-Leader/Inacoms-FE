@@ -153,7 +153,8 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Global styles={reset} />
       <ThemeProvider theme={theme}>
-        {router.pathname === "/signin" ? (
+        {router.pathname === "/signin" ||
+        router.pathname === "/members/[id]" ? (
           <>
             <Header /> <Component {...pageProps} />
           </>
