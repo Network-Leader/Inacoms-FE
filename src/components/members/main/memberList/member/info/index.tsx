@@ -133,7 +133,6 @@ const ContentBox = styled.div`
 `;
 const Info = ({ member }: { member: any }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log(activeIndex);
   return (
     <InfoBox activeIndex={activeIndex}>
       <div className="x_icon">
