@@ -78,38 +78,44 @@ const MemberListBox = styled.div`
 
 const MemberList = ({ year }: { year: number }) => {
   return (
-    <MemberListBox>
-      <span className="period">Original members</span>
-      <div className="origin_members">
-        {members
-          .filter((i) => i.join < year)
-          .map((item) => (
-            <div className="item" key={item.id}>
-              <Link href={`/members/${item.id}`}>
-                <div className="thumb"></div>
-              </Link>
-              <p className="name">{item.name}</p>
-              {item.role !== "부원" ? (
-                <span className="role">{item.role}</span>
-              ) : null}
-            </div>
-          ))}
-      </div>
-      <span className="period">New members</span>
-      <div className="new_members">
-        {members
-          .filter((i) => i.join === year)
-          .map((item) => (
-            <div className="item" key={item.id}>
-              <Link href={`/members/${item.id}`}>
-                <div className="thumb"></div>
-              </Link>
-              <p className="name">{item.name}</p>
-              {item.role ? <span className="role">{item.role}</span> : null}
-            </div>
-          ))}
-      </div>
-    </MemberListBox>
+    <>
+      {members && (
+        <MemberListBox>
+          <span className="period">Original members</span>
+          <div className="origin_members">
+            {members
+              .filter((i) => i?.join < year)
+              .map((item) => (
+                <div className="item" key={item?.id}>
+                  <Link href={`/members/${item?.id}`}>
+                    <div className="thumb"></div>
+                  </Link>
+                  <p className="name">{item?.name}</p>
+                  {item?.role !== "부원" ? (
+                    <span className="role">{item?.role}</span>
+                  ) : null}
+                </div>
+              ))}
+          </div>
+          <span className="period">New members</span>
+          <div className="new_members">
+            {members
+              .filter((i) => i?.join === year)
+              .map((item) => (
+                <div className="item" key={item?.id}>
+                  <Link href={`/members/${item?.id}`}>
+                    <div className="thumb"></div>
+                  </Link>
+                  <p className="name">{item?.name}</p>
+                  {item?.role ? (
+                    <span className="role">{item?.role}</span>
+                  ) : null}
+                </div>
+              ))}
+          </div>
+        </MemberListBox>
+      )}
+    </>
   );
 };
 

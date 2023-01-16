@@ -155,7 +155,6 @@ const Info = ({ member }: { member: any }) => {
         <Swiper
           slidesPerView={1}
           initialSlide={1}
-          centeredSlides
           onSlideChange={(e) => {
             setActiveIndex(e.activeIndex);
           }}
