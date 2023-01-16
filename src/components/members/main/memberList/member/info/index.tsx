@@ -197,7 +197,7 @@ const Info = ({ member }: { member: any }) => {
         <div className="subInfo1">
           <div className="track">
             <div className="title">선호 트랙</div>
-            {member[0]?.track.map((item: any, index: number) => (
+            {member[0]?.track?.map((item: any, index: number) => (
               <div className="list" key={index}>
                 {item}
               </div>
@@ -205,7 +205,7 @@ const Info = ({ member }: { member: any }) => {
           </div>
           <div className="contact">
             <div className="title">컨택</div>
-            {member[0]?.contact.map((item: any, index: number) => (
+            {member[0]?.contact?.map((item: any, index: number) => (
               <a
                 href={`${item.link}`}
                 target="_blank"
@@ -213,7 +213,7 @@ const Info = ({ member }: { member: any }) => {
                 key={index}
               >
                 <div className="list" style={{ cursor: "pointer" }}>
-                  {item.mark}
+                  {item?.mark}
                 </div>
               </a>
             ))}
@@ -223,7 +223,7 @@ const Info = ({ member }: { member: any }) => {
           <div className="behance">
             <div className="title">비핸스</div>
             <a
-              href={`${member[0]?.behance.link}`}
+              href={`${member[0]?.behance?.link}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -231,7 +231,7 @@ const Info = ({ member }: { member: any }) => {
                 className="list"
                 style={{ textDecoration: "underline", cursor: "pointer" }}
               >
-                {member[0]?.behance.mark}
+                {member[0]?.behance?.mark}
               </div>
             </a>
           </div>
