@@ -34,7 +34,7 @@ const Member = ({
 }) => {
   return (
     <>
-      {member ? (
+      {member && (
         <MemberContainer>
           <div className="prev_icon">
             {dyn === 1 ? (
@@ -84,8 +84,6 @@ const Member = ({
             )}
           </div>
         </MemberContainer>
-      ) : (
-        <p>no data</p>
       )}
     </>
   );
