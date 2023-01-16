@@ -12,7 +12,6 @@ const Btn = styled.div`
 const SwiperPrevBtn = () => {
   const swiper = useSwiper();
   const slide = useSwiperSlide();
-  console.log(slide);
   return (
     <Btn
       onClick={() => {

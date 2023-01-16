@@ -33,55 +33,61 @@ const Member = ({
   dyn: number;
 }) => {
   return (
-    <MemberContainer>
-      <div className="prev_icon">
-        {dyn === 1 ? (
-          <Link href={`/members/${length}`}>
-            <Image
-              src="/images/icons/members/members_prev.png"
-              alt="prev"
-              width={14}
-              height={30}
-              style={{ cursor: "pointer" }}
-            />
-          </Link>
-        ) : (
-          <Link href={`/members/${dyn - 1}`}>
-            <Image
-              src="/images/icons/members/members_prev.png"
-              alt="prev"
-              width={14}
-              height={30}
-              style={{ cursor: "pointer" }}
-            />
-          </Link>
-        )}
-      </div>
-      <Info member={member} />
-      <div className="next_icon">
-        {dyn === length ? (
-          <Link href={`/members/1`}>
-            <Image
-              src="/images/icons/members/members_next.png"
-              alt="prev"
-              width={14}
-              height={30}
-              style={{ cursor: "pointer" }}
-            />
-          </Link>
-        ) : (
-          <Link href={`/members/${dyn + 1}`}>
-            <Image
-              src="/images/icons/members/members_next.png"
-              alt="prev"
-              width={14}
-              height={30}
-              style={{ cursor: "pointer" }}
-            />
-          </Link>
-        )}
-      </div>
-    </MemberContainer>
+    <>
+      {member ? (
+        <MemberContainer>
+          <div className="prev_icon">
+            {dyn === 1 ? (
+              <Link href={`/members/${length}`}>
+                <Image
+                  src="/images/icons/members/members_prev.png"
+                  alt="prev"
+                  width={14}
+                  height={30}
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+            ) : (
+              <Link href={`/members/${dyn - 1}`}>
+                <Image
+                  src="/images/icons/members/members_prev.png"
+                  alt="prev"
+                  width={14}
+                  height={30}
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+            )}
+          </div>
+          <Info member={member} />
+          <div className="next_icon">
+            {dyn === length ? (
+              <Link href={`/members/1`}>
+                <Image
+                  src="/images/icons/members/members_next.png"
+                  alt="prev"
+                  width={14}
+                  height={30}
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+            ) : (
+              <Link href={`/members/${dyn + 1}`}>
+                <Image
+                  src="/images/icons/members/members_next.png"
+                  alt="prev"
+                  width={14}
+                  height={30}
+                  style={{ cursor: "pointer" }}
+                />
+              </Link>
+            )}
+          </div>
+        </MemberContainer>
+      ) : (
+        <p>no data</p>
+      )}
+    </>
   );
 };
 
