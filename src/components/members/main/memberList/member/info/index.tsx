@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import PrevBtn from "./btn/prev";
 import NextBtn from "./btn/next";
@@ -133,6 +133,7 @@ const ContentBox = styled.div`
 `;
 const Info = ({ member }: { member: any }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <InfoBox activeIndex={activeIndex}>
       <div className="x_icon">
@@ -153,10 +154,12 @@ const Info = ({ member }: { member: any }) => {
         </div>
         <Swiper
           slidesPerView={1}
-          initialSlide={1}
+          initialSlide={0}
+          centeredSlides
           onSlideChange={(e) => {
             setActiveIndex(e.activeIndex);
           }}
+          style={{ height: "546.37px" }}
         >
           <PrevBtn />
           <NextBtn />
