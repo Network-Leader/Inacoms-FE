@@ -13,7 +13,7 @@ const WorkTitleSection = styled.section`
     left: 0;
     width: 100%;
     height: 32.8vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
     mix-blend-mode: normal;
   }
   .textBox {
