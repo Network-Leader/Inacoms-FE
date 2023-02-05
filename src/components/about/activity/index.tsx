@@ -1,23 +1,30 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { useScrollPercent } from "../../../hooks/useScrollPercent";
 
-const ActivitySection = styled.section`
+const ActivitySection = styled.section<{ scrollP: number }>`
   background-color: ${(props) => props.theme.color.black};
   padding-bottom: 412.53px;
+
   .activityBox {
     width: 1038px;
     margin: 0 auto;
     display: flex;
     gap: 160px;
+    height: 2110px;
     .textBox {
       .title {
+        position: sticky;
+        top: 83px;
         font-size: 60px;
         font-weight: 700;
         line-height: 138.2%;
         color: ${(props) => props.theme.color.white};
-        margin-bottom: 30px;
+        margin-bottom: ${(props) => (props.scrollP > 70 ? "110px" : "30px")};
       }
       .subtitle {
+        position: sticky;
+        top: 280px;
         font-size: 24px;
         font-weight: 500;
         line-height: 162.2%;
@@ -68,8 +75,10 @@ const actList = [
 ];
 
 const Activity = () => {
+  const scrollP = useScrollPercent();
+  console.log(scrollP);
   return (
-    <ActivitySection>
+    <ActivitySection scrollP={scrollP}>
       <div className="activityBox">
         <div className="textBox">
           <div className="title">

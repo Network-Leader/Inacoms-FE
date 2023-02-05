@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 import { useSwiper } from "swiper/react";
 import Image from "next/image";
 const Btn = styled.div`
-  position: fixed;
-  left: 493px;
-  bottom: 73px;
+  position: absolute;
+  left: 213px;
+  bottom: 0;
   cursor: pointer;
   z-index: 333;
 `;
