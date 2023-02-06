@@ -33,6 +33,34 @@ const MemberListBox = styled.div`
     flex-wrap: wrap;
     padding-bottom: 348.04px;
   }
+  .item2 {
+    text-align: center;
+    &:nth-child(9n + 1) {
+      margin-left: 0.1px;
+    }
+    .thumb {
+      width: 165px;
+      height: 247.01px;
+      background-color: #a9a9a9;
+      border-radius: 12px;
+      margin-bottom: 16.5px;
+      cursor: pointer;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      color: ${(props) => props.theme.color.white};
+      margin-bottom: 12px;
+    }
+    .role {
+      font-size: 12px;
+      font-weight: 500;
+      color: ${(props) => props.theme.color.black};
+      background-color: ${(props) => props.theme.color.gray_D9};
+      border-radius: 5px;
+      padding: 4px 11px;
+    }
+  }
   .item {
     text-align: center;
     .thumb {
@@ -87,7 +115,7 @@ const MemberList = ({ year }: { year: number }) => {
             {members
               .filter((i) => i?.join < year)
               .map((item) => (
-                <div className="item" key={item?.id}>
+                <div className="item2" key={item?.id}>
                   <Link href={`/members/${item?.id}`}>
                     <div className="thumb"></div>
                   </Link>
