@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import AwardsList from "./awardsList";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import YearList from "./yearList";
 
 const AwardsBox = styled.div`
@@ -30,11 +30,10 @@ const AwardsBox = styled.div`
     display: flex;
   }
 `;
-const yearData = [
-  2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020,
-];
+
 const Awards = () => {
   const [year, setYear] = useState(2008);
+  const scrollRef = useRef();
 
   return (
     <AwardsBox>
@@ -43,8 +42,8 @@ const Awards = () => {
         <p className="subtitle">INACOMS 학회원들의 수상내역</p>
       </div>
       <div className="contentBox">
-        <YearList year={year} setYear={setYear} />
-        <AwardsList />
+        <YearList year={year} setYear={setYear} scrollRef={scrollRef} />
+        <AwardsList scrollRef={scrollRef} setYear={setYear} />
       </div>
     </AwardsBox>
   );

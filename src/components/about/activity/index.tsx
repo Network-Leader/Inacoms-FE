@@ -20,6 +20,7 @@ const ActivitySection = styled.section<{ scrollP: number }>`
         font-weight: 700;
         line-height: 138.2%;
         color: ${(props) => props.theme.color.white};
+        margin-top: ${(props) => props.scrollP < 70 && "-14px"};
         margin-bottom: ${(props) => (props.scrollP > 70 ? "110px" : "30px")};
       }
       .subtitle {

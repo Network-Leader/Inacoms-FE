@@ -14,7 +14,6 @@ const Year = styled.div<{ item: any; year: number }>`
   height: 40px;
   box-sizing: border-box;
   cursor: pointer;
-
   color: ${(props) =>
     props.year === props.item
       ? props.theme.color.red
@@ -27,25 +26,39 @@ const Year = styled.div<{ item: any; year: number }>`
 interface YearType {
   year: number;
   setYear: any;
+  scrollRef: any;
 }
 const yearData = [
-  2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020,
-  2022,
+  { id: 1, year: 2008, posY: 0 },
+  { id: 2, year: 2009, posY: 670 },
+  { id: 3, year: 2010, posY: 1330 },
+  { id: 4, year: 2011, posY: 2000 },
+  { id: 5, year: 2012, posY: 2650 },
+  { id: 6, year: 2013, posY: 3310 },
+  { id: 7, year: 2014, posY: 3970 },
+  { id: 8, year: 2015, posY: 4620 },
+  { id: 9, year: 2016, posY: 5300 },
+  { id: 10, year: 2017, posY: 5950 },
+  { id: 11, year: 2018, posY: 6610 },
+  { id: 12, year: 2019, posY: 7270 },
+  { id: 13, year: 2020, posY: 7930 },
+  { id: 14, year: 2022, posY: 8578 },
 ];
-const YearList = ({ year, setYear }: YearType) => {
-  const onClickYear = (item: any) => {
+const YearList = ({ year, setYear, scrollRef }: YearType) => {
+  const onClickYear = (item: any, posY: any) => {
     setYear(item);
+    scrollRef.current.scrollTop = posY;
   };
   return (
     <YearBox>
-      {yearData.map((item, index) => (
+      {yearData.map((item) => (
         <Year
-          key={index}
-          item={item}
+          key={item.id}
+          item={item.year}
           year={year}
-          onClick={() => onClickYear(item)}
+          onClick={() => onClickYear(item.year, item.posY)}
         >
-          {item}
+          {item.year}
         </Year>
       ))}
     </YearBox>
