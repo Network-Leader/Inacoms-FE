@@ -171,9 +171,16 @@ const Info = ({ member }: { member: any }) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              borderRadius: "12px",
+              overflow: "hidden",
             }}
           >
-            1
+            <Image
+              src={member[0]?.thumbB}
+              width={345.2}
+              height={518.37}
+              alt="썸네일"
+            />
           </SwiperSlide>
           <SwiperSlide
             style={{
@@ -183,9 +190,16 @@ const Info = ({ member }: { member: any }) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              borderRadius: "12px",
+              overflow: "hidden",
             }}
           >
-            2
+            <Image
+              src={member[0]?.thumbC}
+              width={345.2}
+              height={518.37}
+              alt="썸네일"
+            />
           </SwiperSlide>
         </Swiper>
       </div>

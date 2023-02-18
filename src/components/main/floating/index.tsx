@@ -438,7 +438,7 @@ const FloatingFilm = () => {
         onMouseLeave={() => setIsInDesign(false)}
       />
       <img
-        src="/images/item/main/indesign3.jpg"
+        src="/images/item/main/Indesign3.jpg"
         alt="img"
         className="indesign3"
         onMouseOver={() => setIsInDesign(true)}

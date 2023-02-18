@@ -33,75 +33,71 @@ const MemberListBox = styled.div`
     flex-wrap: wrap;
     padding-bottom: 348.04px;
   }
-  .item2 {
-    text-align: center;
-    &:nth-child(9n + 1) {
-      margin-left: 0.1px;
-    }
-    .thumb {
-      width: 165px;
-      height: 247.01px;
-      background-color: #a9a9a9;
-      border-radius: 12px;
-      margin-bottom: 16.5px;
-      cursor: pointer;
-    }
-    .name {
-      font-size: 18px;
-      font-weight: 700;
-      color: ${(props) => props.theme.color.white};
-      margin-bottom: 12px;
-    }
-    .role {
-      font-size: 12px;
-      font-weight: 500;
-      color: ${(props) => props.theme.color.black};
-      background-color: ${(props) => props.theme.color.gray_D9};
-      border-radius: 5px;
-      padding: 4px 11px;
+`;
+const Original = styled.div<{ bgB: string; bgC: string }>`
+  text-align: center;
+  &:nth-child(9n + 1) {
+    margin-left: 0.1px;
+  }
+  .thumb {
+    width: 165px;
+    height: 247.01px;
+    background-color: #a9a9a9;
+    border-radius: 12px;
+    margin-bottom: 16.5px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url(${(props) => props.bgB});
+    background-size: cover;
+    &:hover {
+      background-image: url(${(props) => props.bgC});
     }
   }
-  .item {
-    text-align: center;
-    .thumb {
-      width: 165px;
-      height: 247.01px;
-      background-color: #a9a9a9;
-      border-radius: 12px;
-      margin-bottom: 16.5px;
-      cursor: pointer;
-    }
-    .name {
-      font-size: 18px;
-      font-weight: 700;
-      color: ${(props) => props.theme.color.white};
-      margin-bottom: 12px;
-    }
-    .role {
-      font-size: 12px;
-      font-weight: 500;
-      color: ${(props) => props.theme.color.black};
-      background-color: ${(props) => props.theme.color.gray_D9};
-      border-radius: 5px;
-      padding: 4px 11px;
+  .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: ${(props) => props.theme.color.white};
+    margin-bottom: 12px;
+  }
+  .role {
+    font-size: 12px;
+    font-weight: 500;
+    color: ${(props) => props.theme.color.black};
+    background-color: ${(props) => props.theme.color.gray_D9};
+    border-radius: 5px;
+    padding: 4px 11px;
+  }
+`;
+
+const New = styled.div<{ bgB: string; bgC: string }>`
+  text-align: center;
+  .thumb {
+    width: 165px;
+    height: 247.01px;
+    background-color: #a9a9a9;
+    border-radius: 12px;
+    margin-bottom: 16.5px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url(${(props) => props.bgB});
+    background-size: cover;
+    &:hover {
+      background-image: url(${(props) => props.bgC});
     }
   }
-  .widthDiff {
-    border: 1px solid white;
-    justify-content: center;
-    height: 300px;
-    gap: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 223.2px;
-    &:nth-of-type(odd) {
-      width: 810px;
-      margin: 0 auto;
-    }
-    &:nth-of-type(even) {
-      width: 1025px;
-      margin: 0 auto;
-    }
+  .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: ${(props) => props.theme.color.white};
+    margin-bottom: 12px;
+  }
+  .role {
+    font-size: 12px;
+    font-weight: 500;
+    color: ${(props) => props.theme.color.black};
+    background-color: ${(props) => props.theme.color.gray_D9};
+    border-radius: 5px;
+    padding: 4px 11px;
   }
 `;
 
@@ -115,7 +111,7 @@ const MemberList = ({ year }: { year: number }) => {
             {members
               .filter((i) => i?.join < year)
               .map((item) => (
-                <div className="item2" key={item?.id}>
+                <Original key={item?.id} bgB={item?.thumbB} bgC={item?.thumbC}>
                   <Link href={`/members/${item?.id}`}>
                     <div className="thumb"></div>
                   </Link>
@@ -123,7 +119,7 @@ const MemberList = ({ year }: { year: number }) => {
                   {item?.role !== "부원" ? (
                     <span className="role">{item?.role}</span>
                   ) : null}
-                </div>
+                </Original>
               ))}
           </div>
           <span className="period">New members</span>
@@ -131,7 +127,7 @@ const MemberList = ({ year }: { year: number }) => {
             {members
               .filter((i) => i?.join === year)
               .map((item) => (
-                <div className="item" key={item?.id}>
+                <New key={item?.id} bgB={item?.thumbB} bgC={item?.thumbC}>
                   <Link href={`/members/${item?.id}`}>
                     <div className="thumb"></div>
                   </Link>
@@ -139,7 +135,7 @@ const MemberList = ({ year }: { year: number }) => {
                   {item?.role ? (
                     <span className="role">{item?.role}</span>
                   ) : null}
-                </div>
+                </New>
               ))}
           </div>
         </MemberListBox>

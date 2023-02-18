@@ -67,7 +67,6 @@ const Orientation = () => {
       <div className="inner">
         {Item.map((item) => (
           <div className="item" key={item.id}>
-            {/* <div className="img"></div> */}
             <div className="imgBox">
               <img src={item.src} alt="img" className="img" />
             </div>
