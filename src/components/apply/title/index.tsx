@@ -64,7 +64,8 @@ const ApplyTitle = () => {
           시각디자인 전공학회 INACOMS에서 신규회원을 모집합니다!
         </p>
         <p className="duration">
-          <span>03.07 - 03.15</span>23:00까지
+          추후 공지
+          {/* <span>03.07 - 03.15</span>23:00까지 */}
         </p>
       </div>
       <div className="arrow">

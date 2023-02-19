@@ -74,18 +74,20 @@ const MainApply = () => {
           <div className="duration">
             <div className="type">지원 기간</div>
             <div className="content">
-              03.07 - 03.15{" "}
-              <span style={{ marginLeft: "25px" }}>23:00까지</span>
+              추후 공지
+              {/* 03.07 - 03.15{" "}
+              <span style={{ marginLeft: "25px" }}>23:00까지</span> */}
             </div>
           </div>
           <div className="interview">
             <div className="type">면접 일정</div>
             <div className="content">
-              03.17{" "}
+              추후 공지
+              {/* 03.17{" "}
               <span style={{ marginLeft: "10px", marginRight: "10px" }}>
                 19:00
               </span>{" "}
-              ZOOM
+              ZOOM */}
             </div>
           </div>
         </div>
@@ -98,19 +100,19 @@ const MainApply = () => {
               <p className="subtype" style={{ marginRight: "68px" }}>
                 오픈 카톡 문의 링크
               </p>
-              <p className="subcontent">https://open.kakao.com/o/gOFvsm3d</p>
+              <p className="subcontent">https://open.kakao.com/o/g7loap5e</p>
             </div>
             <div className="content">
               <p className="subtype" style={{ marginRight: "177px" }}>
                 회장
               </p>
-              <p className="subcontent">최예지 * 010 4189 0562</p>
+              <p className="subcontent">정다원 * 010 5131 6754</p>
             </div>
             <div className="content">
               <p className="subtype" style={{ marginRight: "161px" }}>
                 부회장
               </p>
-              <p className="subcontent">정다원 * 010 5131 6754</p>
+              <p className="subcontent">윤은정 * 010 5732 3839</p>
             </div>
           </div>
         </div>
