@@ -81,7 +81,7 @@ const Plan = () => {
   return (
     <PlanSection>
       <div className="planBox">
-        <p className="title">2022 Plan</p>
+        <p className="title">2023 Plan</p>
         <p className="subtitle">INACOMS는 한해동안 이런 활동을 해요</p>
         <div className="content">
           <div className="half">
