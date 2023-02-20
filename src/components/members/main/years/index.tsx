@@ -29,6 +29,8 @@ const YearsBox = styled.div`
 `;
 
 const Years = ({ year, setYear }: YearType) => {
+  const date = new Date();
+  console.log(+date.getFullYear());
   return (
     <YearsBox>
       {year === 2022 ? null : (
@@ -43,15 +45,17 @@ const Years = ({ year, setYear }: YearType) => {
         </div>
       )}
       <p className="curYear">{year}</p>
-      <div className="nextBtn" onClick={() => setYear(year + 1)}>
-        <Image
-          src="/images/icons/members/members_next.png"
-          alt="next"
-          width={14}
-          height={30}
-          style={{ cursor: "pointer" }}
-        />
-      </div>
+      {year < +date.getFullYear() && (
+        <div className="nextBtn" onClick={() => setYear(year + 1)}>
+          <Image
+            src="/images/icons/members/members_next.png"
+            alt="next"
+            width={14}
+            height={30}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
+      )}
     </YearsBox>
   );
 };
