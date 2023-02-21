@@ -5,7 +5,6 @@ const ApplySection = styled.section`
   .inner {
     width: 1035px;
     margin: 0 auto;
-    height: 500px;
     .type {
       color: ${(props) => props.theme.color.white};
       font-size: 18px;
@@ -34,9 +33,43 @@ const ApplySection = styled.section`
       display: inline-block;
       margin-left: 39px;
     }
+
     .firstBox {
       border-bottom: 1px solid white;
       padding: 18px 0 43px 65px;
+      .howTo {
+        display: flex;
+        margin-top: 22px;
+        .howToType {
+          color: ${(props) => props.theme.color.white};
+          font-size: 18px;
+          font-weight: 500;
+          padding: 13px 66px;
+          border: 3px solid;
+          border-radius: 50px;
+          height: 50px;
+          display: inline-block;
+          border-color: ${(props) => props.theme.color.white};
+          &:hover {
+            color: ${(props) => props.theme.color.black};
+            background-color: ${(props) => props.theme.color.white};
+            font-size: 18px;
+            font-weight: 700;
+            padding: 13px 66px;
+            border: 3px solid;
+            border-radius: 50px;
+            display: inline-block;
+          }
+        }
+        .howToContent {
+          color: ${(props) => props.theme.color.white};
+          font-size: 18px;
+          display: inline-block;
+          font-weight: 500;
+          line-height: 28px;
+          margin-left: 39px;
+        }
+      }
     }
     .secondBox {
       padding: 4.5px 0 0 65px;
@@ -68,26 +101,32 @@ const MainApply = () => {
           <div className="qualify">
             <div className="type">지원 자격</div>
             <div className="content">
-              시각디자인학과 학부생 - 본전공생 (신입생, 재학생-2학년)
+              시각디자인전공 학부생 - 본전공생 (신입생, 재학생-2학년)
             </div>
           </div>
           <div className="duration">
             <div className="type">지원 기간</div>
             <div className="content">
-              추후 공지
-              {/* 03.07 - 03.15{" "}
-              <span style={{ marginLeft: "25px" }}>23:00까지</span> */}
+              23.02.27 - 23.03.04{" "}
+              <span style={{ marginLeft: "25px" }}>23:59까지</span>
+            </div>
+          </div>
+          <div className="howTo">
+            <div className="howToType">지원 방법</div>
+            <div className="howToContent">
+              자유양식 지원서(PDF) 작성 후 구글 폼을 통해 지원
+              <br /> 신입생 - 간단한 프로필과 자기자신 어필
+              <br /> 재학생 - 자유양식 포트폴리오
             </div>
           </div>
           <div className="interview">
             <div className="type">면접 일정</div>
             <div className="content">
-              추후 공지
-              {/* 03.17{" "}
+              23.03.09(목){" "}
               <span style={{ marginLeft: "10px", marginRight: "10px" }}>
                 19:00
               </span>{" "}
-              ZOOM */}
+              다빈치관 619호
             </div>
           </div>
         </div>
