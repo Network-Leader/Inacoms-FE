@@ -47,7 +47,13 @@ const Link = () => {
           <br />
           INACOMS
         </p>
-        <div className="pdfBtn">지원하기</div>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdgIywA3OKyic4ulntNaNSTr1_hOKzrEBcI8PTyzQk4yB39nA/viewform?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="pdfBtn">지원하기</div>
+        </a>
       </div>
     </LinkSection>
   );
