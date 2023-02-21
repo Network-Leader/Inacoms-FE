@@ -67,6 +67,7 @@ const ApplySection = styled.section`
           display: inline-block;
           font-weight: 500;
           line-height: 28px;
+          margin-top: 10px;
           margin-left: 39px;
         }
       }
