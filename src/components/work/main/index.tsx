@@ -6,7 +6,7 @@ import EachWork from "./eachWork";
 
 const WorkMainSection = styled.section`
   background-color: ${(props) => props.theme.color.black};
-  padding: 223px 0 30px 0;
+  padding: 223px 0 297.6px 0;
 `;
 
 const WorkMain = () => {

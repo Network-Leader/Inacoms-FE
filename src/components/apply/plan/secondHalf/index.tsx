@@ -21,11 +21,11 @@ const secondHalfList = [
     month: "11월",
     list: ["하반기 공모전 제출", "단기 워크숍", "프로필 촬영"],
   },
-  { index: 5, month: "12월", list: ["단기 워크숍"] },
+  { index: 5, month: "12월", list: ["단기 워크숍", "정기전시"] },
   {
     index: 6,
     month: "겨울방학",
-    list: ["동계 MT", "겨울방학 활동"],
+    list: ["동계 MT", "정기전시"],
   },
 ];
 

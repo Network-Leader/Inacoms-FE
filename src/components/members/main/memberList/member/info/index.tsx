@@ -257,10 +257,6 @@ const Info = ({ member }: { member: any }) => {
             <div className="list">{member[0]?.email}</div>
           </div>
         </div>
-        <div className="etc">
-          <div className="item"></div>
-          <div className="item"></div>
-        </div>
       </ContentBox>
     </InfoBox>
   );
