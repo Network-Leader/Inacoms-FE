@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "no more RED CARD",
+    "type": "워크샵",
+    "start": "2022 / 5 / 1",
+    "end": "2022 / 5 / 31",
+    "thumbnail": "/images/item/works/nomore-t.png"
+  },
+  {
+    "id": 2,
+    "title": "일상의 실천 내부 세미나",
+    "type": "세미나",
+    "start": "2022 / 5 / 10",
+    "thumbnail": "/images/item/works/ilsangce-t.png"
+  },
+  {
+    "id": 3,
+    "title": "Weneedless Campaign",
+    "type": "공모전",
+    "start": "2022 / 3 / 24",
+    "end": "2022 / 5 / 2",
+    "thumbnail": "/images/item/works/weneed-t.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "영화의 전당 리디자인",
+    "type": "공모전",
+    "start": "2022 / 3 / 24",
+    "end": "2022 / 5 / 2",
+    "thumbnail": "/images/item/works/movie-t.png"
+  },
+  {
+    "id": 5,
+    "title": "부산지역화폐 리뉴얼",
+    "type": "공모전",
+    "start": "2022 / 3 / 24",
+    "end": "2022 / 5 / 2",
+    "thumbnail": "/images/item/works/busan-t.png"
+  },
+  {
+    "id": 6,
+    "title": "씩씩농장",
+    "type": "공모전",
+    "start": "2022 / 3 / 24",
+    "end": "2022 / 5 / 19",
+    "thumbnail": "/images/item/works/siksik-t.png"
+  },
+  {
+    "id": 7,
+    "title": "일상가꿈",
+    "type": "공모전",
+    "start": "2022 / 3 / 24",
+    "end": "2022 / 5 / 2",
+    "thumbnail": "/images/item/works/ilsangga-t.png"
+  },
+  {
+    "id": 8,
+    "title": "꾸레미",
+    "type": "공모전",
+    "start": "2022 / 9 / 1",
+    "end": "2022 / 10 / 31",
+    "thumbnail": "/images/item/works/gguremi-t.jpg"
+  },
+  {
+    "id": 9,
+    "title": "ERROR 4XX",
+    "type": "공모전",
+    "start": "2022 / 9 / 1",
+    "end": "2022 / 10 / 32",
+    "thumbnail": "/images/item/works/error-t.jpeg"
+  },
+  {
+    "id": 10,
+    "title": "강원도 산불 모션그래픽",
+    "type": "공모전",
+    "start": "2022 / 9 / 1",
+    "end": "2022 / 10 / 33",
+    "thumbnail": "/images/item/works/gangwon-t.png"
+  },
+  {
+    "id": 11,
+    "title": "Let's go plogging",
+    "type": "공모전",
+    "start": "2022 / 9 / 1",
+    "end": "2022 / 10 / 34",
+    "thumbnail": "/images/item/works/plogging-t.jpeg"
+  },
+  {
+    "id": 12,
+    "title": "ㅇㅎ전",
+    "type": "정기전시",
+    "start": "2022 / 9 / 1",
+    "end": "2022 / 9 / 8",
+    "thumbnail": "/images/item/works/yahoo-t.png"
+  }
+]

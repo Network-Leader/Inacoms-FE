@@ -158,6 +158,8 @@ export default function App({ Component, pageProps }: AppProps) {
           <>
             <Header /> <Component {...pageProps} />
           </>
+        ) : router.pathname === "/work/[id]" ? (
+          <Component {...pageProps} />
         ) : (
           <Layout>
             <Component {...pageProps} />

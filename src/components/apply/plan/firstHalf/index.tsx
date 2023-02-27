@@ -18,11 +18,11 @@ const firstHalfList = [
     month: "5월",
     list: ["상반기 공모전 제출", "단기 워크숍"],
   },
-  { index: 5, month: "6월", list: ["단기 워크숍", "정기전시 준비"] },
+  { index: 5, month: "6월", list: ["단기 워크숍", "학회 연합 전시"] },
   {
     index: 6,
     month: "여름방학",
-    list: ["정기전시 준비", "하계 MT"],
+    list: ["학회 연합 전시", "하계 MT"],
   },
 ];
 
