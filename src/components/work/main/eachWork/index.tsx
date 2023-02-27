@@ -77,8 +77,8 @@ const EachWork = () => {
     <EachWorkSection>
       <div className="workBox">
         {works.map((item) => (
-          <Link href={`/work/${item?.id}`}>
-            <EachBox key={item?.id} thumb={item?.thumbnail}>
+          <Link href={`/work/${item?.id}`} key={item?.id}>
+            <EachBox thumb={item?.thumbnail}>
               <div className="blur"></div>
               <div className="title">{item?.title}</div>
               <div className="duration">
