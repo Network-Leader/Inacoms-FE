@@ -96,6 +96,20 @@ const EachBox = styled.div<{ thumb: string }>`
     }
     .memberBox {
       width: 50%;
+      .members {
+        margin: 20px 0 0 0;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        .member {
+          text-align: center;
+          .memname {
+            font-size: 12px;
+            color: white;
+            margin-top: 10px;
+          }
+        }
+      }
     }
     .subtitle {
       color: white;
@@ -174,6 +188,21 @@ const Each = ({ work }: { work: any }) => {
           </div>
           <div className="memberBox">
             <p className="subtitle">팀원</p>
+            <div className="members">
+              {work[0]?.member?.map((item: any) => (
+                <div className="member" key={item.id}>
+                  {item.name && (
+                    <Image
+                      src="/images/icons/work/avatar_member.png"
+                      alt="아바타"
+                      width={46.74}
+                      height={46.74}
+                    />
+                  )}
+                  <div className="memname">{item.name}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="leaderInfoBox">
