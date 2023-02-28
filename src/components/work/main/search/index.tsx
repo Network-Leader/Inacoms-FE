@@ -53,9 +53,21 @@ const SearchSection = styled.div`
 interface SearchType {
   setSearchType: any;
   setSearchValue: any;
+  searchValue: any;
 }
 
-const WorkSearch = ({ setSearchType, setSearchValue }: SearchType) => {
+const WorkSearch = ({
+  setSearchType,
+  searchValue,
+  setSearchValue,
+}: SearchType) => {
+  const onSearch = () => {
+    alert("검색기능은 현재 준비중입니다.");
+    setSearchValue("");
+  };
+  const onKeyPress = (e: any) => {
+    if (e.key === "Enter") onSearch();
+  };
   return (
     <SearchSection>
       <div className="searchBox">
@@ -71,9 +83,11 @@ const WorkSearch = ({ setSearchType, setSearchValue }: SearchType) => {
         <div className="divide"></div>
         <input
           className="search"
+          value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
+          onKeyPress={onKeyPress}
         />
-        <div className="searchIcon">
+        <div className="searchIcon" onClick={onSearch}>
           <Image
             src={"/images/icons/work/search_icon.png"}
             alt="down"

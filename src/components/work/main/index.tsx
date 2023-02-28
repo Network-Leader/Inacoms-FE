@@ -18,6 +18,7 @@ const WorkMain = () => {
       <WorkSearch
         setSearchType={setSearchType}
         setSearchValue={setSearchValue}
+        searchValue={searchValue}
       />
       <WorkCategory category={category} setCategory={setCategory} />
       <EachWork />
