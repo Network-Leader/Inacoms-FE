@@ -10,7 +10,6 @@ const EachSection = styled.section`
 const EachBox = styled.div<{ thumb: string }>`
   background-color: black;
   width: 1024px;
-  padding-bottom: 50px;
   margin: 0 auto;
   border-radius: 20px;
   position: relative;
@@ -62,6 +61,7 @@ const EachBox = styled.div<{ thumb: string }>`
   .contentBox {
     padding-top: 43px;
     padding-left: 88px;
+    margin-bottom: 90px;
     .des {
       width: 648px;
       font-size: 14px;
@@ -84,6 +84,45 @@ const EachBox = styled.div<{ thumb: string }>`
         padding: 6px 18px;
         margin-right: 10px;
       }
+    }
+  }
+  .subBox {
+    width: 848px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 210px;
+    .toolBox {
+      width: 50%;
+    }
+    .memberBox {
+      width: 50%;
+    }
+    .subtitle {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .leaderInfoBox {
+    width: 100%;
+    padding: 81px 0 54px 0;
+    background-color: ${(props) => props.theme.color.black_14};
+    text-align: center;
+    .name {
+      margin: 18px 0 34px 0;
+      font-size: 20px;
+      color: white;
+      font-weight: 700;
+    }
+  }
+  .copyrightBox {
+    text-align: center;
+    padding: 51px 0 76px 0;
+    .cr {
+      color: ${(props) => props.theme.color.gray_6F};
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 24px;
     }
   }
 `;
@@ -128,6 +167,32 @@ const Each = ({ work }: { work: any }) => {
               </span>
             ))}
           </div>
+        </div>
+        <div className="subBox">
+          <div className="toolBox">
+            <p className="subtitle">활용 툴</p>
+          </div>
+          <div className="memberBox">
+            <p className="subtitle">팀원</p>
+          </div>
+        </div>
+        <div className="leaderInfoBox">
+          <Image
+            src="/images/icons/work/avatar_member.png"
+            alt="아바타"
+            width={66}
+            height={66}
+          />
+          <p className="name">{work[0]?.leader}</p>
+        </div>
+        <div className="copyrightBox">
+          <Image
+            src="/images/logo/work_logo.png"
+            alt="로고"
+            width={86}
+            height={21}
+          />
+          <p className="cr">Copyright ⓒ{work[0]?.leader} All Rights Reserved</p>
         </div>
       </EachBox>
     </EachSection>
