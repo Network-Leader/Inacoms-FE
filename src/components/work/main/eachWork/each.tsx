@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
-
+import members from "../../../../data/members.json";
 const EachSection = styled.section`
   width: 100vw;
   background-color: #3d3d3d;
@@ -92,12 +92,16 @@ const EachBox = styled.div<{ thumb: string }>`
     display: flex;
     min-height: 210px;
     .toolBox {
-      width: 50%;
+      width: 52%;
+      .tool {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
     }
     .memberBox {
-      width: 50%;
+      width: 48%;
       .members {
-        margin: 20px 0 0 0;
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
@@ -115,18 +119,67 @@ const EachBox = styled.div<{ thumb: string }>`
       color: white;
       font-size: 24px;
       font-weight: 700;
+      margin-bottom: 20px;
     }
   }
   .leaderInfoBox {
     width: 100%;
     padding: 81px 0 54px 0;
     background-color: ${(props) => props.theme.color.black_14};
-    text-align: center;
+    .avatar {
+      text-align: center;
+    }
     .name {
       margin: 18px 0 34px 0;
       font-size: 20px;
       color: white;
       font-weight: 700;
+      text-align: center;
+    }
+    .email {
+      display: flex;
+      gap: 21px;
+      margin-bottom: 16px;
+      margin-left: 35%;
+    }
+    .insta {
+      display: flex;
+      gap: 21px;
+      margin-bottom: 16px;
+      margin-left: 35%;
+    }
+    .behance {
+      display: flex;
+      gap: 21px;
+      margin-left: 35%;
+    }
+    .sub {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      width: 59.39px;
+    }
+    .info {
+      font-size: 14px;
+      color: white;
+    }
+    .link {
+      border: 1px solid;
+      border-color: ${(props) => props.theme.color.red};
+      color: ${(props) => props.theme.color.red};
+      border-radius: 67px;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 32px;
+      display: block;
+      width: 191.4px;
+      margin: 38px auto 0;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: ${(props) => props.theme.color.red};
+        color: white;
+      }
     }
   }
   .copyrightBox {
@@ -141,6 +194,8 @@ const EachBox = styled.div<{ thumb: string }>`
   }
 `;
 const Each = ({ work }: { work: any }) => {
+  const leader_info = members?.filter((item) => item.id === work[0]?.leader_id);
+
   return (
     <EachSection>
       <EachBox thumb={work[0]?.thumbnail}>
@@ -185,6 +240,17 @@ const Each = ({ work }: { work: any }) => {
         <div className="subBox">
           <div className="toolBox">
             <p className="subtitle">활용 툴</p>
+            <div className="tool">
+              {work[0]?.tools?.map((item: any) => (
+                <Image
+                  src={item?.tool}
+                  alt="tool"
+                  width={56}
+                  height={56}
+                  key={item.id}
+                />
+              ))}
+            </div>
           </div>
           <div className="memberBox">
             <p className="subtitle">팀원</p>
@@ -206,13 +272,30 @@ const Each = ({ work }: { work: any }) => {
           </div>
         </div>
         <div className="leaderInfoBox">
-          <Image
-            src="/images/icons/work/avatar_member.png"
-            alt="아바타"
-            width={66}
-            height={66}
-          />
+          <div className="avatar">
+            <Image
+              src="/images/icons/work/avatar_member.png"
+              alt="아바타"
+              width={66}
+              height={66}
+            />
+          </div>
           <p className="name">{work[0]?.leader}</p>
+          <div className="email">
+            <div className="sub">Email</div>
+            <div className="info">{leader_info[0]?.email}</div>
+          </div>
+          <div className="insta">
+            <div className="sub">Insta</div>
+            <div className="info">{leader_info[0]?.contact[0]?.mark}</div>
+          </div>
+          <div className="behance">
+            <div className="sub">Behance</div>
+            <div className="info">{leader_info[0]?.behance?.link}</div>
+          </div>
+          <Link href={`/members/${leader_info[0]?.id}`}>
+            <div className="link">Let’s go Profile link</div>
+          </Link>
         </div>
         <div className="copyrightBox">
           <Image
