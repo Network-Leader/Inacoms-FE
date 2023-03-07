@@ -15,7 +15,7 @@ const ActivitySection = styled.section<{ scrollP: number }>`
     .textBox {
       .title {
         position: sticky;
-        top: 83px;
+        top: 113px;
         font-size: 60px;
         font-weight: 700;
         line-height: 138.2%;
@@ -25,7 +25,7 @@ const ActivitySection = styled.section<{ scrollP: number }>`
       }
       .subtitle {
         position: sticky;
-        top: 280px;
+        top: 310px;
         font-size: 24px;
         font-weight: 500;
         line-height: 162.2%;
@@ -98,7 +98,13 @@ const Activity = () => {
             <div className="actItem" key={item.id}>
               <p className="actTitle">{item.title}</p>
               <p className="actSub">{item.des}</p>
-              <Image src={item.url} alt="act" width={602} height={397} />
+              <Image
+                src={item.url}
+                alt="act"
+                width={602}
+                height={397}
+                style={{ borderRadius: "13px" }}
+              />
             </div>
           ))}
         </div>
