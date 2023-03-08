@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import Image from "next/image";
+import MainSwiperNextBtn from "./next";
 import "swiper/css";
 
 const ActivitySlideSection = styled.section`
@@ -17,7 +18,19 @@ const ActivitySlideSection = styled.section`
   }
   .slideBox {
     width: 3136px;
-    margin-left: 14.4%;
+    margin-left: 14.4vw;
+    @media (min-width: 1700px) {
+      margin-left: 22.4vw;
+    }
+  }
+  .active {
+    position: absolute;
+    height: 530px;
+    width: 1024px;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 `;
 
@@ -40,9 +53,15 @@ const ActivitySlide = () => {
           loop={true}
           loopAdditionalSlides={2}
         >
+          <MainSwiperNextBtn />
           {slideList.map((item) => (
             <SwiperSlide key={item.id}>
-              <Image src={item.uri} alt="slide" width={1024} height={530} />
+              {({ isActive }) => (
+                <>
+                  <Image src={item.uri} alt="slide" width={1024} height={530} />
+                  {isActive || <div className="active"></div>}
+                </>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
