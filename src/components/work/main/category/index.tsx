@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useEffect } from "react";
 
 const CategorySection = styled.div`
   width: 100vw;
@@ -12,12 +13,13 @@ const CategorySection = styled.div`
   }
 `;
 
-const CategoryItem = styled.div<{ category: string }>`
+const CategoryItem = styled.div<{ category: any; eachCate: any }>`
+  cursor: pointer;
   color: ${(props) => props.theme.color.white};
   font-size: 18px;
   font-weight: 700;
   background-color: ${(props) =>
-    props.category === "스터디" || props.category === "워크샵"
+    props.category?.includes(props.eachCate)
       ? props.theme.color.red
       : props.theme.color.black_2E};
   padding: 8px 14.5px;
@@ -36,18 +38,44 @@ const categoryArr = [
 const WorkCategory = ({
   category,
   setCategory,
+  setResCategory,
+  resCategory,
 }: {
-  category: string;
+  category: any;
   setCategory: any;
+  resCategory: any;
+  setResCategory: any;
 }) => {
+  const handleCategory = (e: any) => {
+    const categoryId = e.target.id;
+    setCategory({
+      categoryTags: {
+        ...category.categoryTags,
+        [categoryId]: !category.categoryTags[categoryId],
+      },
+    });
+  };
+  useEffect(() => {
+    const clicked = [];
+    const now = category.categoryTags;
+    for (let i in now) {
+      if (now[i]) {
+        clicked.push(i);
+      }
+    }
+    setResCategory(clicked);
+  }, [category.categoryTags]);
+
   return (
     <CategorySection>
       <div className="categoryBox">
         {categoryArr.map((item) => (
           <CategoryItem
+            id={item.text}
             key={item.id}
-            onClick={() => setCategory(item.text)}
-            category={item.text}
+            onClick={handleCategory}
+            category={resCategory}
+            eachCate={item.text}
           >
             {item.text}
           </CategoryItem>
