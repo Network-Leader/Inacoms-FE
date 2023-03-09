@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import works from "../../../../data/works.json";
 import Image from "next/image";
 import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
+import { type } from "os";
+import { orderBy } from "lodash";
 
 const EachWorkSection = styled.div`
   width: 100vw;
@@ -72,11 +75,25 @@ const EachBox = styled.div<{ thumb: string }>`
   }
 `;
 
-const EachWork = () => {
+const EachWork = ({
+  searchValue,
+  resCategory,
+}: {
+  searchValue: string;
+  resCategory: any;
+}) => {
+  const searchWorks = works.filter((item) => {
+    return item?.title?.includes(searchValue);
+  });
+
+  const typeWorks = searchWorks.filter((item) => {
+    if (resCategory.length === 0) return !resCategory?.includes(item.type);
+    else return resCategory?.includes(item.type);
+  });
   return (
     <EachWorkSection>
       <div className="workBox">
-        {works.map((item) => (
+        {typeWorks?.map((item) => (
           <Link href={`/work/${item?.id}`} key={item?.id}>
             <EachBox thumb={item?.thumbnail}>
               <div className="blur"></div>

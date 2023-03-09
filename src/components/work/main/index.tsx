@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import WorkSearch from "./search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WorkCategory from "./category";
 import EachWork from "./eachWork";
 
@@ -10,9 +10,29 @@ const WorkMainSection = styled.section`
 `;
 
 const WorkMain = () => {
-  const [searchType, setSearchType] = useState("name");
+  const [searchType, setSearchType] = useState("title");
   const [searchValue, setSearchValue] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState({
+    categoryTags: {
+      스터디: false,
+      정기전시: false,
+      워크샵: false,
+      세미나: false,
+      대외활동: false,
+      공모전: false,
+    },
+  });
+  const [resCategory, setResCategory] = useState([""]);
+  // useEffect(() => {
+  //   setResCategory([
+  //     "정기전시",
+  //     "스터디",
+  //     "워크샵",
+  //     "세미나",
+  //     "대외활동",
+  //     "공모전",
+  //   ]);
+  // }, []);
   return (
     <WorkMainSection>
       <WorkSearch
@@ -20,8 +40,13 @@ const WorkMain = () => {
         setSearchValue={setSearchValue}
         searchValue={searchValue}
       />
-      <WorkCategory category={category} setCategory={setCategory} />
-      <EachWork />
+      <WorkCategory
+        category={category}
+        setCategory={setCategory}
+        resCategory={resCategory}
+        setResCategory={setResCategory}
+      />
+      <EachWork searchValue={searchValue} resCategory={resCategory} />
     </WorkMainSection>
   );
 };

@@ -61,13 +61,6 @@ const WorkSearch = ({
   searchValue,
   setSearchValue,
 }: SearchType) => {
-  const onSearch = () => {
-    alert("검색기능은 현재 준비중입니다.");
-    setSearchValue("");
-  };
-  const onKeyPress = (e: any) => {
-    if (e.key === "Enter") onSearch();
-  };
   return (
     <SearchSection>
       <div className="searchBox">
@@ -77,7 +70,6 @@ const WorkSearch = ({
             defaultValue="name"
           >
             <option value="name">활동명</option>
-            <option value="type">종류</option>
           </select>
         </div>
         <div className="divide"></div>
@@ -85,9 +77,8 @@ const WorkSearch = ({
           className="search"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-          onKeyPress={onKeyPress}
         />
-        <div className="searchIcon" onClick={onSearch}>
+        <div className="searchIcon">
           <Image
             src={"/images/icons/work/search_icon.png"}
             alt="down"
